@@ -3,6 +3,8 @@ import { Link, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Contact from "./Contact"
 import Banner from "./Banner"
+import Signup from "./Signup";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -158,10 +160,13 @@ const Navbar = () => {
       )}
     </nav>
 
+    <div id="routes" className="pt-20">
     <Routes>
       <Route path="/" element={<Banner/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/signup" element={<Signup/>}/>
     </Routes>
+    </div>
     </>
   );
 };
